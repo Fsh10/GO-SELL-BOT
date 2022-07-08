@@ -1,0 +1,66 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+coverage.txt
+coverage.html
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Application specific
+chats.txt
+chats_*.txt
+
+# Build artifacts
+*.tar.gz
+*.zip
+
+# Air (live reload tool)
+tmp/
+
+# Delve debugger
+__debug_bin
+
+# Local configuration
+config.local.yaml
+config.local.yml
+
+# Git history generation scripts
+deploy_script.sh
