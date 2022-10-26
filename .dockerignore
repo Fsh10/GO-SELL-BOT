@@ -1,0 +1,72 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+docs/
+README.md
+CONTRIBUTING.md
+CHANGELOG.md
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+*_test.go
+coverage.txt
+coverage.html
+*.out
+
+# Build artifacts
+bin/
+dist/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Application specific (will be mounted as volume)
+chats.txt
+chats_*.txt
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Makefile
+Makefile
+
+# Linter configs
+.golangci.yml
+.golangci.yaml
+
+# CI configs
+.github/
+

@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: go-sell-bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - SELLER_ID=${SELLER_ID}
+      - DEBUG=${DEBUG:-false}
+      - LOAD_CACHE=${LOAD_CACHE:-true}
+      - CHATS_FILE=${CHATS_FILE:-/app/chats.txt}
+      - SEARCH_URL=${SEARCH_URL:-}
+      - U_PRODUCT=${U_PRODUCT:-0}
+      - U_PRODUCT_OPT=${U_PRODUCT_OPT:-0}
+      - SEARCH_INSTRUCTION=${SEARCH_INSTRUCTION:-false}
+    volumes:
+      - ./chats.txt:/app/chats.txt
+    command:
+      - -token=${BOT_TOKEN}
+      - -seller-id=${SELLER_ID}
+      - -debug=${DEBUG:-false}
+      - -load-cache=${LOAD_CACHE:-true}
+      - -chats-file=/app/chats.txt
+      - -search-url=${SEARCH_URL:-}
+      - -uproduct=${U_PRODUCT:-0}
+      - -uproductopt=${U_PRODUCT_OPT:-0}
+      - -search-instruction=${SEARCH_INSTRUCTION:-false}
+    networks:
+      - bot-network
+    healthcheck:
+      test: ["CMD", "pgrep", "-f", "go-sell-bot"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  bot-network:
+    driver: bridge
+
