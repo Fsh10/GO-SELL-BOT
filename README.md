@@ -1,5 +1,10 @@
 # GO-SELL Bot
 
+![Go Reference](https://pkg.go.dev/badge/github.com/Fsh10/GO-SELL-BOT.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/go-sell-bot)
+![Go Report Card](https://goreportcard.com/badge/github.com/Fsh10/GO-SELL-BOT)
+![Build Status](https://github.com/Fsh10/GO-SELL-BOT/workflows/CI/badge.svg)
+
 GO-SELL Bot is a production-ready Telegram bot for e-commerce catalog management, designed to provide seamless product browsing, search capabilities, and order processing through an intuitive conversational interface.
 
 ## Table of Contents
